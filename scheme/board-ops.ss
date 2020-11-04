@@ -74,3 +74,7 @@
   )
 )
 
+; helper function if playing manually through REPL
+(define (load-state-file filename)
+  (load-state (open-input-file filename) #f)
+)
