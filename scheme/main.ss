@@ -33,7 +33,7 @@
 
 (define (get-game-config)
   ; eat incoming newline if it's there
-  (when (and (char-ready?) (char=? (peek-char) #\newline))
+  (when (and (char-ready? (current-input-port)) (char=? (peek-char) #\newline))
     (get-line (current-input-port)))
   (let* (
     [black-is-comp? [begin
